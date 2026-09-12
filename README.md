@@ -1,5 +1,6 @@
-# 0xCyberSecUz — Noldan Pro darajagacha! 
-# Kiberxavfsizlik Yo'l Xaritasi
+# 0xCyberSecUz
+# Kiberxavfsizlik 0 -> Pro
+## Yo'l Xaritasi
 
 > O'zbek tilida kiberxavfsizlikni jiddiy, tizimli va amaliy asosda o'rganish uchun ochiq loyiha. Maqsad — nazariyani emas, **ko'nikmani** shakllantirish: har bir bosqich amaliyot, laboratoriya va real muammolar bilan mustahkamlanadi.
 
