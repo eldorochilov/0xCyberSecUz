@@ -1,93 +1,132 @@
-# 02 — Web Security (Web ilovalar xavfsizligi)
+<div align="center">
+
+# 🟡 02 — Web Security
+
+![Daraja](https://img.shields.io/badge/Daraja-Intermediate-EAB308?style=for-the-badge)
+![Muddat](https://img.shields.io/badge/Muddat-4--6_oy-EAB308?style=for-the-badge)
+
+*Web ilovalar xavfsizligiga chuqur kirish*
+
+</div>
 
 > Web xavfsizlik — kiberxavfsizlikning eng "kirish oson" yo'nalishi, lekin chuqurligi cheksiz. Bu bo'limda siz zamonaviy web ilovalarga qarshi hujum vektorlarini, ularning sabablarini va himoya usullarini o'rganasiz.
 
-## Oldingi shart
-HTTP/HTTPS ishlash mexanizmini (`00-foundations`) va asosiy dasturlash tushunchalarini bilishingiz kerak.
+⚠️ **Oldingi shart:** HTTP/HTTPS ishlash mexanizmini ([`00-foundations`](../00-foundations/README.md)) va asosiy dasturlash tushunchalarini bilishingiz kerak.
 
 ---
 
-## 1. OWASP Top 10 — zamin sifatida
+## 1️⃣ 🔟 OWASP Top 10 — zamin sifatida
 
 OWASP Top 10 — eng keng tarqalgan va xavfli web zaifliklar ro'yxati. Har birini nafaqat "qanday ekspluatatsiya qilish" balki **nega paydo bo'lishi** nuqtai nazaridan o'rganing:
 
-### 1.1 Injection (SQL Injection va boshqalar)
+<details open>
+<summary><b>💉 Injection (SQL Injection va boshqalar)</b></summary>
+<br>
+
 - SQL so'rovlari foydalanuvchi kiritmasi bilan noto'g'ri birlashtirilganda yuzaga keladi
 - Klassik hujum: `' OR '1'='1` — autentifikatsiyani chetlab o'tish
 - UNION-based, Boolean-based va Time-based blind SQLi farqlari
-- **Himoya:** parametrlangan so'rovlar (prepared statements), input validatsiya
 
-### 1.2 Cross-Site Scripting (XSS)
+✅ **Himoya:** parametrlangan so'rovlar (prepared statements), input validatsiya
+
+</details>
+
+<details open>
+<summary><b>🧬 Cross-Site Scripting (XSS)</b></summary>
+<br>
+
 - Stored, Reflected va DOM-based XSS farqlari
 - Nega brauzer foydalanuvchi kiritgan skriptni "ishonchli" deb bajaradi
-- **Himoya:** output encoding, Content Security Policy (CSP)
 
-### 1.3 Cross-Site Request Forgery (CSRF)
+✅ **Himoya:** output encoding, Content Security Policy (CSP)
+
+</details>
+
+<details open>
+<summary><b>🎭 Cross-Site Request Forgery (CSRF)</b></summary>
+<br>
+
 - Foydalanuvchi bilmagan holda uning nomidan so'rov yuborilishi
 - CSRF token'lar qanday himoya qiladi
 
-### 1.4 Server-Side Request Forgery (SSRF)
+</details>
+
+<details open>
+<summary><b>🔄 Server-Side Request Forgery (SSRF)</b></summary>
+<br>
+
 - Server orqali ichki tarmoq resurslariga (masalan, cloud metadata endpoint `169.254.169.254`) so'rov yuborish
 - Zamonaviy cloud muhitlarida juda xavfli hujum turi
 
-### 1.5 Broken Authentication / Access Control
+</details>
+
+<details open>
+<summary><b>🔓 Broken Authentication / Access Control</b></summary>
+<br>
+
 - Session boshqaruvidagi xatolar, JWT noto'g'ri validatsiyasi
-- IDOR (Insecure Direct Object Reference) — foydalanuvchi ID'ni o'zgartirib, boshqalarning ma'lumotiga kirish
+- **IDOR** (Insecure Direct Object Reference) — foydalanuvchi ID'ni o'zgartirib, boshqalarning ma'lumotiga kirish
 
-### 1.6 Qolgan muhim toifalar
-- Security Misconfiguration, Sensitive Data Exposure, XXE (XML External Entity), Insecure Deserialization
+</details>
 
----
+<details>
+<summary><b>➕ Qolgan muhim toifalar</b></summary>
+<br>
 
-## 2. Amaliy vositalar
+- Security Misconfiguration
+- Sensitive Data Exposure
+- XXE (XML External Entity)
+- Insecure Deserialization
 
-### 2.1 Burp Suite
-- Proxy sifatida brauzer va server orasidagi trafikni ushlab turish
-- Request'ni qo'lda o'zgartirib qayta yuborish (Repeater)
-- Avtomatlashtirilgan skanerlash (Intruder) — brute-force va fuzzing uchun
-
-### 2.2 Brauzer DevTools
-- Network tab orqali so'rov/javoblarni tahlil qilish
-- Console orqali JS injection'larni sinash
-
-### 2.3 Boshqa foydali tool'lar
-- `sqlmap` — SQL injection'ni avtomatlashtirish (lekin avval qo'lda tushunib, keyin ishlating)
-- `ffuf`/`gobuster` — dizayn/fayl fuzzing (yashirin endpoint'larni topish)
+</details>
 
 ---
 
-## 3. Laboratoriyalar (amaliyot qilish joylari)
+## 2️⃣ 🔧 Amaliy vositalar
+
+| Tool | Vazifasi |
+|---|---|
+| 🦊 **Burp Suite** | Proxy sifatida brauzer/server trafigini ushlab turish, Repeater orqali qo'lda o'zgartirish, Intruder orqali fuzzing |
+| 🛠️ **Brauzer DevTools** | Network tab orqali so'rov/javoblarni tahlil qilish, Console orqali JS injection sinash |
+| 🐍 `sqlmap` | SQL injection'ni avtomatlashtirish *(avval qo'lda tushunib, keyin ishlating!)* |
+| 🔍 `ffuf` / `gobuster` | Yashirin endpoint/fayl fuzzing |
+
+---
+
+## 3️⃣ 🧪 Laboratoriyalar
 
 | Platforma | Nega tavsiya etiladi |
 |---|---|
-| **PortSwigger Web Security Academy** | Bepul, eng chuqur va tizimli — har bir zaiflik nazariy tushuntirish + interaktiv lab bilan keladi |
-| DVWA (Damn Vulnerable Web Application) | Lokal o'rnatib, xavfsiz muhitda mashq qilish uchun |
-| TryHackMe (Web fundamentals yo'li) | Boshlang'ichlar uchun yo'naltirilgan, video bilan |
-| HackTheBox (Web challenges) | Murakkabroq, real dunyoga yaqin senariylar |
+| 🏆 **PortSwigger Web Security Academy** | Bepul, eng chuqur va tizimli — har bir zaiflik nazariy tushuntirish + interaktiv lab bilan keladi |
+| 🎯 **DVWA** | Lokal o'rnatib, xavfsiz muhitda mashq qilish uchun |
+| 🟩 **TryHackMe** (Web fundamentals) | Boshlang'ichlar uchun yo'naltirilgan, video bilan |
+| 📦 **HackTheBox** (Web challenges) | Murakkabroq, real dunyoga yaqin senariylar |
 
-**Tavsiya:** PortSwigger Academy'ni tizimli ravishda, har bir mavzuni tartib bilan o'tib chiqing — bu bepul resurslar orasida eng sifatlisi hisoblanadi.
-
----
-
-## 4. Amaliy loyiha
-
-**Vazifa:** Ataylab zaif qilib yozilgan oddiy web ilova (masalan, login formasi + qidiruv funksiyasi) yarating (PHP+MySQL yoki Node.js+SQLite), so'ngra:
-
-1. Unga SQL injection orqali kirib ko'ring
-2. XSS zaifligini joylashtirib, uni ekspluatatsiya qiling
-3. Keyin — har ikkala zaiflikni **to'g'irlang** (parametrlangan so'rov, output encoding)
-
-Bu — "hujum qiluvchi tafakkur" va "himoyachi tafakkur"ni bir vaqtda rivojlantiradi.
+> ⭐ **Tavsiya:** PortSwigger Academy'ni tizimli ravishda, har bir mavzuni tartib bilan o'tib chiqing — bu bepul resurslar orasida eng sifatlisi hisoblanadi.
 
 ---
 
-## ✅ Bu bosqichni tugatgach, siz quyidagilarni bilishingiz kerak:
+## 4️⃣ 🎯 Amaliy loyiha
+
+> **Vazifa:** Ataylab zaif qilib yozilgan oddiy web ilova (masalan, login formasi + qidiruv funksiyasi) yarating (PHP+MySQL yoki Node.js+SQLite), so'ngra:
+
+1. [ ] Unga SQL injection orqali kirib ko'ring
+2. [ ] XSS zaifligini joylashtirib, uni ekspluatatsiya qiling
+3. [ ] Har ikkala zaiflikni **to'g'irlang** (parametrlangan so'rov, output encoding)
+
+> 💡 Bu — "hujum qiluvchi tafakkur" va "himoyachi tafakkur"ni bir vaqtda rivojlantiradi.
+
+---
+
+## ✅ Bu bosqichni tugatgach, siz quyidagilarni bilishingiz kerak
 
 - [ ] OWASP Top 10'dagi har bir zaiflikni misol bilan tushuntira olasiz
 - [ ] Burp Suite'da Proxy va Repeater'dan foydalana olasiz
 - [ ] SQL injection'ni qo'lda (sqlmap'siz) topib, ekspluatatsiya qila olasiz
 - [ ] Stored va Reflected XSS orasidagi farqni amaliyotda ko'rsata olasiz
 - [ ] O'z zaif ilovangizni yozib, uni sindirib, keyin tuzatgan bo'lasiz
+
+---
 
 ## 📚 Resurslar
 
@@ -98,5 +137,11 @@ Bu — "hujum qiluvchi tafakkur" va "himoyachi tafakkur"ni bir vaqtda rivojlanti
 | *The Web Application Hacker's Handbook* | Chuqur va klassik kitob |
 | DVWA / bWAPP | Lokal mashq qilish uchun zaif ilovalar |
 
-**Keyingi qadam:** [`03-network-pentest/`](../03-network-pentest/README.md) — tarmoq penetratsion testi va Active Directory.
+---
+
+<div align="center">
+
+**◀** [🟢 01-beginner](../01-beginner/README.md) &nbsp;|&nbsp; **Keyingi qadam →** [🟡 03-network-pentest](../03-network-pentest/README.md)
+
+</div>
 
