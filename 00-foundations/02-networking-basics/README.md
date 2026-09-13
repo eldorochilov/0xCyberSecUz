@@ -1,52 +1,35 @@
-# 🌐 Networking Asoslari
+<div align="center">
 
-> **00-foundations / 02-networking-basics**
-> Tarmoqni tushunmasdan turib "hacker" bo'lish mumkin emas — har qanday hujum, paket darajasida sodir bo'ladigan voqeadir.
+![Networking Asoslari](https://capsule-render.vercel.app/api?type=waving&color=0:1e3c72,100:2a5298&height=180&section=header&text=Networking%20Asoslari&fontSize=40&fontColor=ffffff&fontAlign=50&animation=fadeIn)
+
+**00-foundations / 02-networking-basics**
+
+![TCP/IP](https://img.shields.io/badge/TCP%2FIP-1e3c72?style=for-the-badge&logo=cisco&logoColor=white)
+![DNS](https://img.shields.io/badge/DNS-2a5298?style=for-the-badge&logo=internetarchive&logoColor=white)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
+![Level](https://img.shields.io/badge/Daraja-Boshlang'ich-2ea44f?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🎯 Nima uchun kerak?
+### 🎯 Nima uchun kerak?
 
-Web xavfsizlik, network pentest va hatto reverse engineering'ning katta qismi — tarmoq protokollari qanday ishlashini bilishga tayanadi.
+Tarmoqni tushunmasdan turib "hacker" bo'lish mumkin emas — har qanday hujum, paket darajasida sodir bo'ladigan voqeadir. Web xavfsizlik, network pentest va reverse engineering'ning katta qismi shu bilimga tayanadi.
 
 ---
 
-## 📚 Mavzular ro'yxati
+## 📚 Mavzular
 
-### 1. OSI va TCP/IP modellari
-- 7 qatlamli OSI model — har biri nima uchun kerak
-- TCP/IP modeli bilan solishtirish
-- Enkapsulatsiya tushunchasi (paket qanday "o'raladi")
-
-### 2. IP manzillar va subnetting
-- IPv4 vs IPv6
-- Public vs private IP (`192.168.x.x`, `10.x.x.x`)
-- Subnet mask, CIDR notatsiyasi (`/24`, `/16`)
-
-### 3. TCP vs UDP
-- 3-way handshake (`SYN`, `SYN-ACK`, `ACK`)
-- Nega TCP ishonchli, UDP tezroq
-- Portlar tushunchasi (well-known, registered, dynamic)
-
-### 4. DNS
-- Domen nomi qanday IP'ga aylanadi
-- `A`, `AAAA`, `CNAME`, `MX`, `TXT` yozuvlari
-- DNS spoofing/poisoning nima ekanligi haqida umumiy tushuncha
-
-### 5. HTTP/HTTPS
-- So'rov-javob (request-response) modeli
-- Metodlar: `GET`, `POST`, `PUT`, `DELETE`
-- Headerlar, cookie, session
-- TLS/SSL nima uchun kerak (shifrlash asoslari)
-
-### 6. Muhim tarmoq vositalari
-- `ping`, `traceroute`/`tracert`
-- `nmap` — port skanerlash asoslari
-- `Wireshark`/`tcpdump` — paketlarni tutish va tahlil qilish
-
-### 7. Firewall va NAT
-- Firewall qoidalari qanday ishlaydi
-- NAT nima uchun kerak (bitta public IP, ko'p ichki qurilma)
+<table>
+<tr><td width="40" align="center">🧱</td><td><b>OSI va TCP/IP modellari</b><br>7 qatlamli OSI model · TCP/IP bilan solishtirish · enkapsulatsiya</td></tr>
+<tr><td width="40" align="center">🔢</td><td><b>IP manzillar va subnetting</b><br>IPv4 vs IPv6 · public vs private IP · CIDR (<code>/24</code>, <code>/16</code>)</td></tr>
+<tr><td width="40" align="center">🔄</td><td><b>TCP vs UDP</b><br>3-way handshake (<code>SYN → SYN-ACK → ACK</code>) · portlar tushunchasi</td></tr>
+<tr><td width="40" align="center">🌍</td><td><b>DNS</b><br>Domen → IP jarayoni · <code>A</code>, <code>CNAME</code>, <code>MX</code> yozuvlar · DNS spoofing haqida umumiy tushuncha</td></tr>
+<tr><td width="40" align="center">🔒</td><td><b>HTTP/HTTPS</b><br>Request-response modeli · <code>GET</code>/<code>POST</code> · headers, cookie, TLS/SSL</td></tr>
+<tr><td width="40" align="center">🛰️</td><td><b>Tarmoq vositalari</b><br><code>ping</code>, <code>traceroute</code> · <code>nmap</code> port skanerlash · <code>Wireshark</code>/<code>tcpdump</code></td></tr>
+<tr><td width="40" align="center">🧯</td><td><b>Firewall va NAT</b><br>Firewall qoidalari · NAT nima uchun kerak</td></tr>
+</table>
 
 ---
 
@@ -61,11 +44,18 @@ Web xavfsizlik, network pentest va hatto reverse engineering'ning katta qismi �
 
 ## 📖 Qo'shimcha manbalar
 
-- *Computer Networking: A Top-Down Approach* — Kurose & Ross
-- [cloudflare.com/learning](https://www.cloudflare.com/learning/) — protokollarni sodda tilda tushuntiradi
-- Wireshark rasmiy dokumentatsiyasi
+| Manba | Turi |
+|---|---|
+| *Computer Networking: A Top-Down Approach* — Kurose & Ross | 📘 Kitob |
+| [cloudflare.com/learning](https://www.cloudflare.com/learning/) | 🌐 Sodda tushuntirishlar |
+| Wireshark rasmiy dokumentatsiyasi | 📄 Docs |
 
 ---
 
-⬅️ [Orqaga: 01-linux-basics](../01-linux-basics/README.md) | ➡️ [Keyingi: 03-programming-fundamentals](../03-programming-fundamentals/README.md)
+<div align="center">
 
+⬅️ [01-linux-basics](../01-linux-basics/README.md) &nbsp;·&nbsp; ➡️ [03-programming-fundamentals](../03-programming-fundamentals/README.md)
+
+![footer](https://capsule-render.vercel.app/api?type=rect&color=0:1e3c72,100:2a5298&height=4&section=footer)
+
+</div>
