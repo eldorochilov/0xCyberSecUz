@@ -1,51 +1,34 @@
-# 🐧 Linux Asoslari
+<div align="center">
 
-> **00-foundations / 01-linux-basics**
-> Kiberxavfsizlikning butun poydevori shu yerdan boshlanadi. Terminalni bilmasdan, hech qanday pentest, exploit yoki server xavfsizligi haqida gapirib bo'lmaydi.
+![Linux Asoslari](https://capsule-render.vercel.app/api?type=waving&color=0:2E8B57,100:FCC624&height=180&section=header&text=Linux%20Asoslari&fontSize=42&fontColor=ffffff&fontAlign=50&animation=fadeIn)
+
+**00-foundations / 01-linux-basics**
+
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Level](https://img.shields.io/badge/Daraja-Boshlang'ich-2ea44f?style=for-the-badge)
+
+</div>
 
 ---
 
-## 🎯 Nima uchun kerak?
+### 🎯 Nima uchun kerak?
 
-Har bir pentester, xavfsizlik muhandisi va low-level dasturchi Linuxda "uyidagidek" harakat qila olishi kerak. Ko'pgina server, target mashina va exploitation muhitlari — Linux asosida ishlaydi.
+Kiberxavfsizlikning butun poydevori shu yerdan boshlanadi. Terminalni bilmasdan, hech qanday pentest, exploit yoki server xavfsizligi haqida gapirib bo'lmaydi. Ko'pgina target mashina va exploitation muhitlari — Linux asosida ishlaydi.
 
 ---
 
-## 📚 Mavzular ro'yxati
+## 📚 Mavzular
 
-### 1. Fayl tizimi va navigatsiya
-- `/`, `/etc`, `/var`, `/home`, `/proc`, `/dev` — nima uchun kerak
-- `ls`, `cd`, `pwd`, `find`, `locate`, `tree`
-- Absolute vs relative path
-
-### 2. Fayllar va ruxsatlar (permissions)
-- `chmod`, `chown`, `chgrp`
-- `rwx` va oktal notatsiya (`755`, `644`, `777`)
-- SUID, SGID, sticky bit — xavfsizlik nuqtai nazaridan muhim
-
-### 3. Foydalanuvchilar va guruhlar
-- `/etc/passwd`, `/etc/shadow`, `/etc/group`
-- `useradd`, `usermod`, `su`, `sudo`
-- Root vs oddiy foydalanuvchi tushunchasi
-
-### 4. Jarayonlar (processes)
-- `ps`, `top`, `htop`, `kill`, `kill -9`
-- Foreground vs background (`&`, `jobs`, `fg`, `bg`)
-- systemd va `systemctl` asoslari
-
-### 5. Matn bilan ishlash
-- `cat`, `less`, `head`, `tail`, `grep`, `sed`, `awk`
-- Pipe (`|`) va redirection (`>`, `>>`, `<`)
-- Regular expressions asoslari
-
-### 6. Paket boshqaruvi
-- Debian/Ubuntu: `apt`
-- Arch: `pacman`
-- Termux: `pkg`
-
-### 7. Tarmoq bilan bog'liq buyruqlar (kirish darajasida)
-- `ping`, `curl`, `wget`, `netstat`, `ss`
-- `/etc/hosts`, `/etc/resolv.conf`
+<table>
+<tr><td width="40" align="center">📁</td><td><b>Fayl tizimi va navigatsiya</b><br><code>/etc</code>, <code>/var</code>, <code>/home</code>, <code>/proc</code> · <code>ls</code>, <code>cd</code>, <code>find</code> · absolute vs relative path</td></tr>
+<tr><td width="40" align="center">🔐</td><td><b>Fayllar va ruxsatlar</b><br><code>chmod</code>, <code>chown</code> · <code>rwx</code> va oktal notatsiya · SUID / SGID / sticky bit</td></tr>
+<tr><td width="40" align="center">👤</td><td><b>Foydalanuvchilar va guruhlar</b><br><code>/etc/passwd</code>, <code>/etc/shadow</code> · <code>useradd</code>, <code>sudo</code> · root vs oddiy user</td></tr>
+<tr><td width="40" align="center">⚙️</td><td><b>Jarayonlar (processes)</b><br><code>ps</code>, <code>top</code>, <code>kill</code> · foreground/background · <code>systemctl</code></td></tr>
+<tr><td width="40" align="center">📝</td><td><b>Matn bilan ishlash</b><br><code>grep</code>, <code>sed</code>, <code>awk</code> · pipe (<code>|</code>) va redirection · regex asoslari</td></tr>
+<tr><td width="40" align="center">📦</td><td><b>Paket boshqaruvi</b><br><code>apt</code> · <code>pacman</code> · Termux uchun <code>pkg</code></td></tr>
+<tr><td width="40" align="center">🌐</td><td><b>Kirish darajasidagi tarmoq buyruqlari</b><br><code>ping</code>, <code>curl</code>, <code>netstat</code>, <code>ss</code> · <code>/etc/hosts</code></td></tr>
+</table>
 
 ---
 
@@ -60,11 +43,18 @@ Har bir pentester, xavfsizlik muhandisi va low-level dasturchi Linuxda "uyidagid
 
 ## 📖 Qo'shimcha manbalar
 
-- *The Linux Command Line* — William Shotts (bepul PDF mavjud)
-- [explainshell.com](https://explainshell.com) — har qanday buyruqni bo'laklab tushuntiradi
-- `man` sahifalari — har doim birinchi manba bo'lsin
+| Manba | Turi |
+|---|---|
+| *The Linux Command Line* — William Shotts | 📘 Kitob (bepul PDF) |
+| [explainshell.com](https://explainshell.com) | 🌐 Interaktiv sayt |
+| `man` sahifalari | 📄 Rasmiy dokumentatsiya |
 
 ---
 
-⬅️ [Orqaga: 00-foundations](../README.md) | ➡️ [Keyingi: 02-networking-basics](../02-networking-basics/README.md)
+<div align="center">
 
+⬅️ [00-foundations](../README.md) &nbsp;·&nbsp; ➡️ [02-networking-basics](../02-networking-basics/README.md)
+
+![footer](https://capsule-render.vercel.app/api?type=rect&color=0:2E8B57,100:FCC624&height=4&section=footer)
+
+</div>
