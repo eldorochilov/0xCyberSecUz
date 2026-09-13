@@ -53,7 +53,7 @@ Kiberxavfsizlikning butun poydevori shu yerdan boshlanadi. Terminalni bilmasdan,
 
 <div align="center">
 
-⬅️ [00-foundations](../) &nbsp;·&nbsp; ➡️ [02-networking-basics](../02-networking-basics/README.md)
+⬅️ [00-foundations](../) &nbsp;·&nbsp; ➡️ [02-networking-basics](../02-networking-basics/)
 
 ![footer](https://capsule-render.vercel.app/api?type=rect&color=0:2E8B57,100:FCC624&height=4&section=footer)
 
