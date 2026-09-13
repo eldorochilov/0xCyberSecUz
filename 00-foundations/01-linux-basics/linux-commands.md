@@ -345,7 +345,7 @@ sudo apt update && sudo apt upgrade -y   # tizimni yangilab turish — xavfsizli
 
 <div align="center">
 
-⬅️ **Oldingi:** [00-foundations](../00-foundations/) &nbsp;&nbsp;|&nbsp;&nbsp; **Keyingi:** [02-networking-basics](../02-networking-basics/networking.md) ➡️
+⬅️ **Oldingi:** [00-foundations](00-foundations) &nbsp;&nbsp;|&nbsp;&nbsp; **Keyingi:** [02-networking-basics](../02-networking-basics/networking.md) ➡️
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FF87,50:2C5364,100:0F2027&height=120&section=footer" width="100%"/>
 
